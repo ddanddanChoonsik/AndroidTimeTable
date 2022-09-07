@@ -6,13 +6,113 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_weight="6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/linearLayout_timetable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <GridLayout
+                android:id="@+id/gridlayout_timetable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="6"
+                android:rowCount="27"
+                android:layout_marginBottom="55dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:text=""
+                    android:background="@drawable/cell"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:text="월"
+                    android:background="@drawable/cell"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:text="화"
+                    android:background="@drawable/cell"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:text="수"
+                    android:background="@drawable/cell"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:text="목"
+                    android:background="@drawable/cell"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:text="금"
+                    android:background="@drawable/cell"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_rowWeight="1"
+                    android:layout_gravity="fill"
+                    android:text="09:00"
+                    android:background="@drawable/cell"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/monday0900"
+                    android:layout_gravity="fill"
+                    android:text=""
+                    android:background="@drawable/cell"
+                    android:gravity="center"
+                    android:tag="monday0900"/>
+                <TextView
+                    android:id="@+id/tuesday0900"
+                    android:layout_gravity="fill"
+                    android:text=""
+                    android:background="@drawable/cell"
+                    android:gravity="center"
+                    android:tag="tuesday0900"/>
+                <TextView
+                    android:id="@+id/wednesday0900"
+                    android:layout_gravity="fill"
+                    android:text=""
+                    android:background="@drawable/cell"
+                    android:gravity="center"
+                    android:tag="wednesday0900"/>
+
+                <TextView
+                    android:id="@+id/thursday0900"
+                    android:layout_gravity="fill"
+                    android:text=""
+                    android:background="@drawable/cell"
+                    android:gravity="center"
+                    android:tag="thursday0900"/>
+                <TextView
+                    android:id="@+id/friday0900"
+                    android:layout_gravity="fill"
+                    android:text=""
+                    android:background="@drawable/cell"
+                    android:gravity="center"
+                    android:tag="friday0900"/>
+
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
